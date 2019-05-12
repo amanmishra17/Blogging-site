@@ -211,9 +211,48 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905111729216_InitialModel.cs" />
+    <Compile Include="Migrations\201905111729216_InitialModel.Designer.cs">
+      <DependentUpon>201905111729216_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905111801005_PostModel.cs" />
+    <Compile Include="Migrations\201905111801005_PostModel.Designer.cs">
+      <DependentUpon>201905111801005_PostModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905111810517_CategoryModel.cs" />
+    <Compile Include="Migrations\201905111810517_CategoryModel.Designer.cs">
+      <DependentUpon>201905111810517_CategoryModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905111814062_TagModelAdded.cs" />
+    <Compile Include="Migrations\201905111814062_TagModelAdded.Designer.cs">
+      <DependentUpon>201905111814062_TagModelAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905111815400_TagModelAdded1.cs" />
+    <Compile Include="Migrations\201905111815400_TagModelAdded1.Designer.cs">
+      <DependentUpon>201905111815400_TagModelAdded1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905111821009_PostModel1.cs" />
+    <Compile Include="Migrations\201905111821009_PostModel1.Designer.cs">
+      <DependentUpon>201905111821009_PostModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905111822100_PostModel2.cs" />
+    <Compile Include="Migrations\201905111822100_PostModel2.Designer.cs">
+      <DependentUpon>201905111822100_PostModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905111822417_PostModel3.cs" />
+    <Compile Include="Migrations\201905111822417_PostModel3.Designer.cs">
+      <DependentUpon>201905111822417_PostModel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ICategory.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IPost.cs" />
+    <Compile Include="Models\ITag.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -280,6 +319,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DBO\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -288,6 +329,35 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905111729216_InitialModel.resx">
+      <DependentUpon>201905111729216_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905111801005_PostModel.resx">
+      <DependentUpon>201905111801005_PostModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905111810517_CategoryModel.resx">
+      <DependentUpon>201905111810517_CategoryModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905111814062_TagModelAdded.resx">
+      <DependentUpon>201905111814062_TagModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905111815400_TagModelAdded1.resx">
+      <DependentUpon>201905111815400_TagModelAdded1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905111821009_PostModel1.resx">
+      <DependentUpon>201905111821009_PostModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905111822100_PostModel2.resx">
+      <DependentUpon>201905111822100_PostModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905111822417_PostModel3.resx">
+      <DependentUpon>201905111822417_PostModel3.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -307,7 +377,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>47993</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:47993/</IISUrl>
+          <IISUrl>http://localhost:47503/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:47503/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
